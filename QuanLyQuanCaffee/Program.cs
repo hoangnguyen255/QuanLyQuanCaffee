@@ -18,6 +18,7 @@ namespace QuanLyQuanCaffee
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        //ádjfkhaskdjf 
         //Tôi là thanh vưa 
         //Xin chao 1
     }
