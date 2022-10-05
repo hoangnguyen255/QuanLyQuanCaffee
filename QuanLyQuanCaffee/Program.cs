@@ -19,6 +19,6 @@ namespace QuanLyQuanCaffee
             Application.Run(new Form1());
         }
         //Tôi là thanh vưa 
-        //Xin chao
+        //Xin chao 1
     }
 }
