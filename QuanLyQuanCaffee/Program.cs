@@ -18,5 +18,6 @@ namespace QuanLyQuanCaffee
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        //Xin chao
     }
 }
