@@ -22,6 +22,6 @@ namespace QuanLyQuanCaffee
         //Tôi là thanh vưa 
         //Xin chao 1
         //Tôi là Bùi Văn Sơn
-        
+        //Hoàn thành nha
     }
 }
