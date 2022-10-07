@@ -41,5 +41,60 @@ namespace QuanLyQuanCaffee
         {
 
         }
+
+        private void btnCaphesuada_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTradaocamsa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTravai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMaracon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCupcake_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

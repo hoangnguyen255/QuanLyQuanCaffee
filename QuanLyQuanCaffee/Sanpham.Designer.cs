@@ -62,7 +62,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnEspresso = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSuachuaphucbontu = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnSuachuanepcam = new System.Windows.Forms.Button();
@@ -77,6 +77,36 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnTradaocamsa = new System.Windows.Forms.Button();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.btnChocolateTarts = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.btnCupcake = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnMuffin = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.btnMoussecake = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.btnMaracon = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btnTiramisu = new System.Windows.Forms.Button();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.btnDonut = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.btnCookies = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.btnFlan = new System.Windows.Forms.Button();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -89,11 +119,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -206,7 +247,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(70, 35);
-            this.tabControl1.Location = new System.Drawing.Point(34, 88);
+            this.tabControl1.Location = new System.Drawing.Point(34, 93);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(768, 658);
@@ -221,7 +262,7 @@
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.btnTradaocamsa);
             this.tabPage1.Controls.Add(this.pictureBox15);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnSuachuaphucbontu);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.pictureBox10);
             this.tabPage1.Controls.Add(this.btnSuachuanepcam);
@@ -274,7 +315,7 @@
             this.btnBacxiu.Location = new System.Drawing.Point(559, 808);
             this.btnBacxiu.Name = "btnBacxiu";
             this.btnBacxiu.Size = new System.Drawing.Size(136, 46);
-            this.btnBacxiu.TabIndex = 25;
+            this.btnBacxiu.TabIndex = 9;
             this.btnBacxiu.Text = "29.000 đ ";
             this.btnBacxiu.UseVisualStyleBackColor = false;
             // 
@@ -305,7 +346,7 @@
             this.btnCaphephin.Location = new System.Drawing.Point(308, 808);
             this.btnCaphephin.Name = "btnCaphephin";
             this.btnCaphephin.Size = new System.Drawing.Size(136, 46);
-            this.btnCaphephin.TabIndex = 22;
+            this.btnCaphephin.TabIndex = 8;
             this.btnCaphephin.Text = "29.000 đ ";
             this.btnCaphephin.UseVisualStyleBackColor = false;
             // 
@@ -348,7 +389,7 @@
             this.btnCaphesuanong.Location = new System.Drawing.Point(38, 808);
             this.btnCaphesuanong.Name = "btnCaphesuanong";
             this.btnCaphesuanong.Size = new System.Drawing.Size(136, 46);
-            this.btnCaphesuanong.TabIndex = 17;
+            this.btnCaphesuanong.TabIndex = 7;
             this.btnCaphesuanong.Text = "25.000 đ ";
             this.btnCaphesuanong.UseVisualStyleBackColor = false;
             // 
@@ -369,9 +410,10 @@
             this.btnCaphesuada.Location = new System.Drawing.Point(561, 505);
             this.btnCaphesuada.Name = "btnCaphesuada";
             this.btnCaphesuada.Size = new System.Drawing.Size(136, 46);
-            this.btnCaphesuada.TabIndex = 16;
+            this.btnCaphesuada.TabIndex = 6;
             this.btnCaphesuada.Text = "25.000 đ ";
             this.btnCaphesuada.UseVisualStyleBackColor = false;
+            this.btnCaphesuada.Click += new System.EventHandler(this.btnCaphesuada_Click);
             // 
             // label7
             // 
@@ -400,7 +442,7 @@
             this.btnCaphedenda.Location = new System.Drawing.Point(307, 505);
             this.btnCaphedenda.Name = "btnCaphedenda";
             this.btnCaphedenda.Size = new System.Drawing.Size(136, 46);
-            this.btnCaphedenda.TabIndex = 13;
+            this.btnCaphedenda.TabIndex = 5;
             this.btnCaphedenda.Text = "25.000 đ ";
             this.btnCaphedenda.UseVisualStyleBackColor = false;
             // 
@@ -441,7 +483,7 @@
             this.btnAmericano.Location = new System.Drawing.Point(40, 505);
             this.btnAmericano.Name = "btnAmericano";
             this.btnAmericano.Size = new System.Drawing.Size(136, 46);
-            this.btnAmericano.TabIndex = 8;
+            this.btnAmericano.TabIndex = 4;
             this.btnAmericano.Text = "39.000 đ ";
             this.btnAmericano.UseVisualStyleBackColor = false;
             // 
@@ -462,7 +504,7 @@
             this.btnMocha.Location = new System.Drawing.Point(554, 212);
             this.btnMocha.Name = "btnMocha";
             this.btnMocha.Size = new System.Drawing.Size(136, 46);
-            this.btnMocha.TabIndex = 7;
+            this.btnMocha.TabIndex = 3;
             this.btnMocha.Text = "39.000 đ ";
             this.btnMocha.UseVisualStyleBackColor = false;
             // 
@@ -493,7 +535,7 @@
             this.btnCapuccino.Location = new System.Drawing.Point(303, 212);
             this.btnCapuccino.Name = "btnCapuccino";
             this.btnCapuccino.Size = new System.Drawing.Size(136, 46);
-            this.btnCapuccino.TabIndex = 4;
+            this.btnCapuccino.TabIndex = 2;
             this.btnCapuccino.Text = "39.000 đ ";
             this.btnCapuccino.UseVisualStyleBackColor = false;
             this.btnCapuccino.Click += new System.EventHandler(this.button1_Click);
@@ -536,12 +578,43 @@
             this.btnEspresso.Location = new System.Drawing.Point(39, 211);
             this.btnEspresso.Name = "btnEspresso";
             this.btnEspresso.Size = new System.Drawing.Size(136, 46);
-            this.btnEspresso.TabIndex = 0;
+            this.btnEspresso.TabIndex = 1;
             this.btnEspresso.Text = "39.000 đ ";
             this.btnEspresso.UseVisualStyleBackColor = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.pictureBox23);
+            this.tabPage2.Controls.Add(this.btnDonut);
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.pictureBox24);
+            this.tabPage2.Controls.Add(this.btnCookies);
+            this.tabPage2.Controls.Add(this.label27);
+            this.tabPage2.Controls.Add(this.pictureBox25);
+            this.tabPage2.Controls.Add(this.label28);
+            this.tabPage2.Controls.Add(this.btnFlan);
+            this.tabPage2.Controls.Add(this.pictureBox26);
+            this.tabPage2.Controls.Add(this.btnChocolateTarts);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.pictureBox13);
+            this.tabPage2.Controls.Add(this.btnCupcake);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.pictureBox16);
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.btnMuffin);
+            this.tabPage2.Controls.Add(this.pictureBox17);
+            this.tabPage2.Controls.Add(this.btnMoussecake);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.pictureBox18);
+            this.tabPage2.Controls.Add(this.btnMaracon);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.pictureBox19);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.btnTiramisu);
+            this.tabPage2.Controls.Add(this.pictureBox20);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
@@ -550,17 +623,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "BAKERY";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // button1
+            // btnSuachuaphucbontu
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(558, 1115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 46);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "29.000 đ ";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSuachuaphucbontu.BackColor = System.Drawing.Color.White;
+            this.btnSuachuaphucbontu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuachuaphucbontu.Location = new System.Drawing.Point(558, 1115);
+            this.btnSuachuaphucbontu.Name = "btnSuachuaphucbontu";
+            this.btnSuachuaphucbontu.Size = new System.Drawing.Size(136, 46);
+            this.btnSuachuaphucbontu.TabIndex = 12;
+            this.btnSuachuaphucbontu.Text = "29.000 đ ";
+            this.btnSuachuaphucbontu.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -589,7 +663,7 @@
             this.btnSuachuanepcam.Location = new System.Drawing.Point(305, 1115);
             this.btnSuachuanepcam.Name = "btnSuachuanepcam";
             this.btnSuachuanepcam.Size = new System.Drawing.Size(136, 46);
-            this.btnSuachuanepcam.TabIndex = 31;
+            this.btnSuachuanepcam.TabIndex = 11;
             this.btnSuachuanepcam.Text = "29.000 đ ";
             this.btnSuachuanepcam.UseVisualStyleBackColor = false;
             // 
@@ -632,7 +706,7 @@
             this.btnCaphetrung.Location = new System.Drawing.Point(40, 1115);
             this.btnCaphetrung.Name = "btnCaphetrung";
             this.btnCaphetrung.Size = new System.Drawing.Size(136, 46);
-            this.btnCaphetrung.TabIndex = 26;
+            this.btnCaphetrung.TabIndex = 10;
             this.btnCaphetrung.Text = "29.000 đ ";
             this.btnCaphetrung.UseVisualStyleBackColor = false;
             // 
@@ -653,9 +727,10 @@
             this.btnTravai.Location = new System.Drawing.Point(305, 1415);
             this.btnTravai.Name = "btnTravai";
             this.btnTravai.Size = new System.Drawing.Size(136, 46);
-            this.btnTravai.TabIndex = 40;
+            this.btnTravai.TabIndex = 14;
             this.btnTravai.Text = "29.000 đ ";
             this.btnTravai.UseVisualStyleBackColor = false;
+            this.btnTravai.Click += new System.EventHandler(this.btnTravai_Click);
             // 
             // label17
             // 
@@ -697,9 +772,10 @@
             this.btnTradaocamsa.Location = new System.Drawing.Point(40, 1415);
             this.btnTradaocamsa.Name = "btnTradaocamsa";
             this.btnTradaocamsa.Size = new System.Drawing.Size(136, 46);
-            this.btnTradaocamsa.TabIndex = 35;
+            this.btnTradaocamsa.TabIndex = 13;
             this.btnTradaocamsa.Text = "29.000 đ ";
             this.btnTradaocamsa.UseVisualStyleBackColor = false;
+            this.btnTradaocamsa.Click += new System.EventHandler(this.btnTradaocamsa_Click);
             // 
             // pictureBox15
             // 
@@ -710,6 +786,323 @@
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 36;
             this.pictureBox15.TabStop = false;
+            // 
+            // btnChocolateTarts
+            // 
+            this.btnChocolateTarts.BackColor = System.Drawing.Color.White;
+            this.btnChocolateTarts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChocolateTarts.Location = new System.Drawing.Point(564, 505);
+            this.btnChocolateTarts.Name = "btnChocolateTarts";
+            this.btnChocolateTarts.Size = new System.Drawing.Size(136, 46);
+            this.btnChocolateTarts.TabIndex = 26;
+            this.btnChocolateTarts.Text = "15.000 đ ";
+            this.btnChocolateTarts.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(549, 456);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 25);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Chocolate Tarts";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(536, 301);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 32;
+            this.pictureBox13.TabStop = false;
+            // 
+            // btnCupcake
+            // 
+            this.btnCupcake.BackColor = System.Drawing.Color.White;
+            this.btnCupcake.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCupcake.Location = new System.Drawing.Point(308, 505);
+            this.btnCupcake.Name = "btnCupcake";
+            this.btnCupcake.Size = new System.Drawing.Size(136, 46);
+            this.btnCupcake.TabIndex = 24;
+            this.btnCupcake.Text = "20.000 đ ";
+            this.btnCupcake.UseVisualStyleBackColor = false;
+            this.btnCupcake.Click += new System.EventHandler(this.btnCupcake_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(320, 456);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 25);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Cupcake";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(280, 301);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 30;
+            this.pictureBox16.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(68, 456);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 25);
+            this.label19.TabIndex = 29;
+            this.label19.Text = "Muffin";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // btnMuffin
+            // 
+            this.btnMuffin.BackColor = System.Drawing.Color.White;
+            this.btnMuffin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuffin.Location = new System.Drawing.Point(43, 505);
+            this.btnMuffin.Name = "btnMuffin";
+            this.btnMuffin.Size = new System.Drawing.Size(136, 46);
+            this.btnMuffin.TabIndex = 23;
+            this.btnMuffin.Text = "20.000 đ ";
+            this.btnMuffin.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(17, 301);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 28;
+            this.pictureBox17.TabStop = false;
+            // 
+            // btnMoussecake
+            // 
+            this.btnMoussecake.BackColor = System.Drawing.Color.White;
+            this.btnMoussecake.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoussecake.Location = new System.Drawing.Point(556, 212);
+            this.btnMoussecake.Name = "btnMoussecake";
+            this.btnMoussecake.Size = new System.Drawing.Size(136, 46);
+            this.btnMoussecake.TabIndex = 22;
+            this.btnMoussecake.Text = "39.000 đ ";
+            this.btnMoussecake.UseVisualStyleBackColor = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(554, 163);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(140, 25);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Mousse cake";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(536, 6);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 25;
+            this.pictureBox18.TabStop = false;
+            // 
+            // btnMaracon
+            // 
+            this.btnMaracon.BackColor = System.Drawing.Color.White;
+            this.btnMaracon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaracon.Location = new System.Drawing.Point(304, 212);
+            this.btnMaracon.Name = "btnMaracon";
+            this.btnMaracon.Size = new System.Drawing.Size(136, 46);
+            this.btnMaracon.TabIndex = 20;
+            this.btnMaracon.Text = "9.000 đ ";
+            this.btnMaracon.UseVisualStyleBackColor = false;
+            this.btnMaracon.Click += new System.EventHandler(this.btnMaracon_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(322, 163);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(96, 25);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Maracon";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(280, 6);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 19;
+            this.pictureBox19.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(60, 163);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(95, 25);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "Tiramisu";
+            // 
+            // btnTiramisu
+            // 
+            this.btnTiramisu.BackColor = System.Drawing.Color.White;
+            this.btnTiramisu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTiramisu.Location = new System.Drawing.Point(39, 211);
+            this.btnTiramisu.Name = "btnTiramisu";
+            this.btnTiramisu.Size = new System.Drawing.Size(136, 46);
+            this.btnTiramisu.TabIndex = 18;
+            this.btnTiramisu.Text = "39.000 đ ";
+            this.btnTiramisu.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
+            this.pictureBox20.Location = new System.Drawing.Point(17, 6);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 16;
+            this.pictureBox20.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(49, 1046);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(104, 25);
+            this.label25.TabIndex = 47;
+            this.label25.Text = "Croissant";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(42, 1095);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(136, 46);
+            this.button9.TabIndex = 41;
+            this.button9.Text = "19.000 đ ";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
+            this.pictureBox23.Location = new System.Drawing.Point(17, 891);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 46;
+            this.pictureBox23.TabStop = false;
+            // 
+            // btnDonut
+            // 
+            this.btnDonut.BackColor = System.Drawing.Color.White;
+            this.btnDonut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonut.Location = new System.Drawing.Point(558, 802);
+            this.btnDonut.Name = "btnDonut";
+            this.btnDonut.Size = new System.Drawing.Size(136, 46);
+            this.btnDonut.TabIndex = 40;
+            this.btnDonut.Text = "15.000 đ ";
+            this.btnDonut.UseVisualStyleBackColor = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(593, 753);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 25);
+            this.label26.TabIndex = 45;
+            this.label26.Text = "Donut";
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
+            this.pictureBox24.Location = new System.Drawing.Point(536, 596);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 43;
+            this.pictureBox24.TabStop = false;
+            // 
+            // btnCookies
+            // 
+            this.btnCookies.BackColor = System.Drawing.Color.White;
+            this.btnCookies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCookies.Location = new System.Drawing.Point(305, 802);
+            this.btnCookies.Name = "btnCookies";
+            this.btnCookies.Size = new System.Drawing.Size(136, 46);
+            this.btnCookies.TabIndex = 38;
+            this.btnCookies.Text = "9.000 đ ";
+            this.btnCookies.UseVisualStyleBackColor = false;
+            this.btnCookies.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(325, 753);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(91, 25);
+            this.label27.TabIndex = 39;
+            this.label27.Text = "Cookies";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
+            this.pictureBox25.Location = new System.Drawing.Point(280, 596);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 37;
+            this.pictureBox25.TabStop = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(77, 753);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(54, 25);
+            this.label28.TabIndex = 35;
+            this.label28.Text = "Flan";
+            // 
+            // btnFlan
+            // 
+            this.btnFlan.BackColor = System.Drawing.Color.White;
+            this.btnFlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFlan.Location = new System.Drawing.Point(41, 801);
+            this.btnFlan.Name = "btnFlan";
+            this.btnFlan.Size = new System.Drawing.Size(136, 46);
+            this.btnFlan.TabIndex = 36;
+            this.btnFlan.Text = "19.000 đ ";
+            this.btnFlan.UseVisualStyleBackColor = false;
+            this.btnFlan.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
+            this.pictureBox26.Location = new System.Drawing.Point(17, 596);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(180, 150);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 34;
+            this.pictureBox26.TabStop = false;
+            this.pictureBox26.Click += new System.EventHandler(this.pictureBox26_Click);
             // 
             // frmSanPham
             // 
@@ -738,11 +1131,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -796,7 +1201,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnTradaocamsa;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSuachuaphucbontu;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnSuachuanepcam;
@@ -805,5 +1210,35 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnCaphetrung;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Button btnChocolateTarts;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Button btnCupcake;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnMuffin;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Button btnMoussecake;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button btnMaracon;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btnTiramisu;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.Button btnDonut;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.Button btnCookies;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button btnFlan;
+        private System.Windows.Forms.PictureBox pictureBox26;
     }
 }
