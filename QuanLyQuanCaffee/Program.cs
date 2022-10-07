@@ -16,5 +16,7 @@ namespace QuanLyQuanCaffee
             Application.Run(new frmCuaHang());
         }
         //ádjfkhaskdjf 
+        //fghjkdh
+
     }
 }
