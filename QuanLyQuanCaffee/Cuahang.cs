@@ -70,6 +70,12 @@ namespace QuanLyQuanCaffee
             }
         }
 
+        private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanlynhanvien frm = new frmQuanlynhanvien();
+            frm.ShowDialog();
+        }
+
         private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             QuanLySanPham frm = new QuanLySanPham();
