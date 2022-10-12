@@ -44,29 +44,30 @@ namespace QuanLyQuanCaffee
                 mnpDanhMuc_Click(sender, e);
             }
 
-            //Sự kiện khi mà người dùng nhấn vào nút đăng xuất
-            private void tspDangXuat_Click(object sender, EventArgs e)
-            {
-                //Đóng form cửa hàng và bật trang đăng nhập lên.
-                if (MessageBox.Show("Bạn muốn đăng xuất", "Trang cửa hàng cafe", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    frmDangNhap frm = new frmDangNhap();
-                    this.Hide();
-                    frm.ShowDialog();
 
-                }
-            }
 
-            //Sự kiện khi mà người dùng nhấn vào nút tạo tài khoản
-            private void tspTaoTaiKhoan_Click(object sender, EventArgs e)
+        //Đóng form cửa hàng và bật trang đăng nhập lên.
+
+
+
+
+        //Sự kiện khi mà người dùng nhấn vào nút đăng xuất
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn đăng xuất", "Trang cửa hàng cafe", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //Hiện thông báo, ẩn trang cửa hàng và mở trang tạo tài khoản
-                if (MessageBox.Show("Cần thoát trang cửa hàng để tạo tài khoản, bạn có muốn không?", "Trang cửa hàng cafe", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    frmTaoTaiKhoan frm = new frmTaoTaiKhoan();
-                    this.Hide();
-                    frm.ShowDialog();
-                }
+                Close();
             }
         }
+        //Sự kiện khi mà người dùng nhấn vào nút tạo tài khoản    
+        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Cần thoát trang cửa hàng để tạo tài khoản, bạn có muốn không?", "Trang cửa hàng cafe", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                frmTaoTaiKhoan frm = new frmTaoTaiKhoan();
+                this.Hide();
+                frm.ShowDialog();
+            }
+        }
+    }
 }

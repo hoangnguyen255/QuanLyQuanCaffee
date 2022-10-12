@@ -8,17 +8,35 @@ namespace QuanLyQuanCaffee
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDangNhap());
+            Application.Run(new frmCuaHang());
         }
         //ádjfkhaskdjf 
-        //1
+        //fghjkdh
+        //sfd 
+        //Tôi là thanh vưa 
+        //Xin chao 1
+        //Tôi là Bùi Văn Sơn
+        //Hoàn thành nha
+>>>>>>>>> Temporary merge branch 2
+        //Tôi là thanh vưa 
+        //Xin chao 1
+        //Tôi là Bùi Văn Sơn
+        //Hoàn thành nha
+>>>>>>>>> Temporary merge branch 2
+        //Tôi là thanh vưa 
+        //Xin chao 1
+        //Tôi là Bùi Văn Sơn
+        //Hoàn thành nha
+>>>>>>>>> Temporary merge branch 2
+        //Tôi là thanh vưa 
+        //Xin chao 1
+        //Tôi là Bùi Văn Sơn
+        //Hoàn thành nha
+>>>>>>>>> Temporary merge branch 2
     }
 }
