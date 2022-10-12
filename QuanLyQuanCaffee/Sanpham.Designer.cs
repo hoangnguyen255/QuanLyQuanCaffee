@@ -146,7 +146,7 @@
             this.dgvMaBan,
             this.dgvSoLuong,
             this.dgvThanhTien});
-            this.dgvHoaDon.Location = new System.Drawing.Point(1004, 142);
+            this.dgvHoaDon.Location = new System.Drawing.Point(959, 133);
             this.dgvHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersWidth = 51;
@@ -193,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(859, 324);
+            this.label2.Location = new System.Drawing.Point(1436, 528);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 1;
@@ -202,7 +202,7 @@
             // btnTinhTien
             // 
             this.btnTinhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTinhTien.Location = new System.Drawing.Point(852, 171);
+            this.btnTinhTien.Location = new System.Drawing.Point(959, 580);
             this.btnTinhTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTinhTien.Name = "btnTinhTien";
             this.btnTinhTien.Size = new System.Drawing.Size(123, 34);
@@ -213,7 +213,7 @@
             // btnGoiMon
             // 
             this.btnGoiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoiMon.Location = new System.Drawing.Point(864, 241);
+            this.btnGoiMon.Location = new System.Drawing.Point(1145, 580);
             this.btnGoiMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoiMon.Name = "btnGoiMon";
             this.btnGoiMon.Size = new System.Drawing.Size(123, 32);
@@ -228,7 +228,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-8, 0);
+            this.label3.Location = new System.Drawing.Point(242, 9);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(500, 10, 500, 10);
             this.label3.Size = new System.Drawing.Size(1264, 59);
@@ -252,7 +252,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(70, 35);
-            this.tabControl1.Location = new System.Drawing.Point(35, 94);
+            this.tabControl1.Location = new System.Drawing.Point(111, 95);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1153,6 +1153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1699, 750);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnGoiMon);
