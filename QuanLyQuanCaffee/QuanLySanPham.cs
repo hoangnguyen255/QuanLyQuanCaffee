@@ -16,5 +16,10 @@ namespace QuanLyQuanCaffee
         {
             InitializeComponent();
         }
+
+        private void QuanLySanPham_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
