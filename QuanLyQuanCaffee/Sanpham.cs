@@ -568,7 +568,7 @@ namespace QuanLyQuanCaffee
                  
                 txtTongTien.Text = (int.Parse(txtTongTien.Text) +int.Parse(dgvHoaDon.Rows[i].Cells[3].Value.ToString())).ToString();
             }
-            var qrcode_text = $"2|99|{"0946786967"}|0|0|{txtTongTien.Text.Trim()}";//gán dữ liệu cho biến string qrcode_text
+            var qrcode_text = $"2|99|{"0946786967"}|||0|0|{txtTongTien.Text.Trim()}";//gán dữ liệu cho biến string qrcode_text
 
             BarcodeWriter barcodeWriter = new BarcodeWriter();//khởi tao 1 biến viết mã 
             EncodingOptions encodingOptions = new EncodingOptions() { Width = 200, Height = 200, Margin = 0, PureBarcode = false };//khơi tạo 1 mã có dài và rộng là 200
