@@ -2,54 +2,612 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyQuanCaffee
 {
+
     public partial class frmSanPham : Form
     {
+        SqlConnection con;
         public frmSanPham()
         {
             InitializeComponent();
         }
+        private void enableFalse()
+        {
+            btnAmericano.Enabled = false;
+            btnBacxiu.Enabled = false;
+            btnCaphedenda.Enabled = false;
+            btnCaphephin.Enabled = false;
+            btnCaphesuanong.Enabled = false;
+            btnCaphesuada.Enabled = false;
+            btnCaphetrung.Enabled = false;
+            btnCapuccino.Enabled = false;
+            btnChocolateTarts.Enabled = false;
+            btnCookies.Enabled = false;
+            btnCupcake.Enabled = false;
+            btnDonut.Enabled = false;
+            btnEspresso.Enabled = false;
+            btnFlan.Enabled = false;
+            btnMaracon.Enabled = false;
+            btnMocha.Enabled = false;
+            btnMoussecake.Enabled = false;
+            btnMuffin.Enabled = false;
+            btnSuachuanepcam.Enabled = false;
+            btnSuachuaphucbontu.Enabled = false;
+            btnTiramisu.Enabled = false;
+            btnTradaocamsa.Enabled = false;
+            btnTravai.Enabled = false;
+            btnCroissant.Enabled = false;
+
+        }
+        private void enableTrue()
+        {
+            btnAmericano.Enabled = true;
+            btnBacxiu.Enabled = true;
+            btnCaphedenda.Enabled = true;
+            btnCaphephin.Enabled = true;
+            btnCaphesuanong.Enabled = true;
+            btnCaphesuada.Enabled = true;
+            btnCaphetrung.Enabled = true;
+            btnCapuccino.Enabled = true;
+            btnChocolateTarts.Enabled = true;
+            btnCookies.Enabled = true;
+            btnCupcake.Enabled = true;
+            btnDonut.Enabled = true;
+            btnEspresso.Enabled = true;
+            btnFlan.Enabled = true;
+            btnMaracon.Enabled = true;
+            btnMocha.Enabled = true;
+            btnMoussecake.Enabled = true;
+            btnMuffin.Enabled = true;
+            btnSuachuanepcam.Enabled = true;
+            btnSuachuaphucbontu.Enabled = true;
+            btnTiramisu.Enabled = true;
+            btnTradaocamsa.Enabled = true;
+            btnTravai.Enabled = true;
+            btnCroissant.Enabled = true;
+
+        }
 
         private void Sanpham_Load(object sender, EventArgs e)
         {
-            btnAmericano.Enabled = false;
+            enableFalse();
+            txtSoLuong.Text = 1.ToString();
+            
+        }
+        public bool ketnoi(String server, String database)// ktra ket noi thanh cong hay ko?
+        {
+            try//ket noi duoc
+            {
+                string s = "Data source=" + server + ";database=" + database + ";Integrated Security = true";
+                con = new SqlConnection(s);
+                con.Open();
+                return true;
+            }
+            catch (Exception e)//ko ket noi duoc
+            {
+                MessageBox.Show("Lỗi kết nối", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //thong bao loi chi tiet
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+        DataTable truyvan(String s)
+        {
+            SqlDataAdapter da;
+            DataSet ds = new DataSet();
+            try
+            {
+                da = new SqlDataAdapter(s, con);// thuc hien cau truy van qua sqldataadapter 
+                                                //dataset ds = new dataset();
+                da.Fill(ds, "KQ");// do vao ds
+                con.Close();
+                return ds.Tables["KQ"];
+            }
+            catch
+            {
+                MessageBox.Show("Loi truy van CSDL");
+                return new DataTable();// new truy van khong duoc tra ve 1 bang rong
+            }
+        }
+
+        bool themxoasua(string s)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(s, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Loi cap nhat CSDL");
+                return false;
+            }
         }
 
         private void btnCupcake_Click(object sender, EventArgs e)
         {
-            btnCupcake.Text = "39000";
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCupcake'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
         }
 
         private void btnEspresso_Click(object sender, EventArgs e)
         {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaEspresso'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text=dt.Rows[0][0].ToString();
+                txtGiaTien.Text=dt.Rows[0][1].ToString();
+
+            }
 
         }
 
         private void btnMocha_Click(object sender, EventArgs e)
         {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaMocha'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
 
+            }
         }
 
         private void btnAmericano_Click(object sender, EventArgs e)
         {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaAmericano'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
 
+            }
         }
 
         private void btnFlan_Click(object sender, EventArgs e)
         {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaFlan'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
 
+            }
         }
 
         private void btnGoiMon_Click(object sender, EventArgs e)
         {
-            btnAmericano.Enabled = true;
+            enableTrue();
+
+        }
+
+        private void btnCapuccino_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCapuccino'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCaphedenda_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphedenda'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCaphesuada_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphesuada'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCaphesuanong_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphesuanong'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCaphephin_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphephin'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnBacxiu_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaBacXiu'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCaphetrung_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphetrung'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnSuachuanepcam_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaSuachuanepcam'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnSuachuaphucbontu_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaSuachuaphucbontu'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnTradaocamsa_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaTradaocamsa'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnTravai_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaTravai'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnTiramisu_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaTiramisu'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnMaracon_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMaracon'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnMoussecake_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMoussecake'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnMuffin_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMuffin'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnChocolateTarts_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaChocolateTarts'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCookies_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCookies'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnDonut_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaDonut'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void btnCroissant_Click(object sender, EventArgs e)
+        {
+            btnCong.Enabled = true;
+            txtSoLuong.Enabled = true;
+            if (ketnoi("MSI\\HAONGUYEN0107", "QuanLyQuanCaffee") == true)
+            {
+                string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCroissant'";
+                DataTable dt = new DataTable();
+                dt = truyvan(s);
+                txtTenSanPham.Text = dt.Rows[0][0].ToString();
+                txtGiaTien.Text = dt.Rows[0][1].ToString();
+
+            }
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnCong_Click(object sender, EventArgs e)
+        {
+            txtSoLuong.Text = (int.Parse(txtSoLuong.Text) + 1).ToString();
+
+        }
+
+        private void btnTru_Click(object sender, EventArgs e)
+        {
+            txtSoLuong.Text = (int.Parse(txtSoLuong.Text) - 1).ToString();
+
+        }
+
+        private void txtSoLuong_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSoLuong.Text == 1.ToString())
+            {
+                btnTru.Enabled = false;
+            }
+            else
+            {
+                btnTru.Enabled = true;
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            
+                int index=dgvHoaDon.Rows.Add();
+
+                dgvHoaDon.Rows[index].Cells[0].Value = txtTenSanPham.Text;
+                dgvHoaDon.Rows[index].Cells[1].Value = txtGiaTien.Text;
+                dgvHoaDon.Rows[index].Cells[2].Value = txtSoLuong.Text;
+                dgvHoaDon.Rows[index].Cells[3].Value = (int.Parse(txtSoLuong.Text) * int.Parse(txtGiaTien.Text));
+            
+        }
+
+        private void btnTinhTien_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= dgvHoaDon.Rows.Count - 1; i++)
+            {
+                txtTongTien.Text = (int.Parse(txtTongTien.Text) + int.Parse(dgvHoaDon.Rows[i].Cells[4].Value.ToString())).ToString();
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                txtTenSanPham.Enabled = true;
+                int selectedRow = GetSelectedRow(txtTenSanPham.Text);
+                dgvHoaDon.Rows.RemoveAt(selectedRow);
+            }
+            catch(Exception eX)
+            {
+                MessageBox.Show(eX.Message);
+            }
+        }
+
+        private int GetSelectedRow(string text)
+        {
+
+            for(int i = 0; i < dgvHoaDon.Rows.Count ;i++)
+            {
+                if (dgvHoaDon.Rows[i].Cells[0].Value.ToString()==text)
+                {
+                    return i;
+                }
+            }
+            return - 1;
+        }
+
+        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+            
+        }
+
+        private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtTenSanPham.Enabled = true;
+
+            int i = e.RowIndex;
+            txtTenSanPham.Text = dgvHoaDon.Rows[i].Cells[0].Value.ToString();
+            txtGiaTien.Text = dgvHoaDon.Rows[i].Cells[1].Value.ToString();
+            txtSoLuong.Text = dgvHoaDon.Rows[i].Cells[2].Value.ToString();
+            txtTenSanPham.Enabled=false;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            int selectedRow = GetSelectedRow(txtTenSanPham.Text);
+           
+            dgvHoaDon.Rows[selectedRow].Cells[1].Value = txtGiaTien.Text;
+            dgvHoaDon.Rows[selectedRow].Cells[2].Value = txtSoLuong.Text;
+            dgvHoaDon.Rows[selectedRow].Cells[3].Value = (int.Parse(txtSoLuong.Text) * int.Parse(txtGiaTien.Text));
 
         }
     }

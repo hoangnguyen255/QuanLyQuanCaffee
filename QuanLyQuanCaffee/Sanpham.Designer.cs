@@ -23,11 +23,6 @@
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSanPham));
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.dgvTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTinhTien = new System.Windows.Forms.Button();
             this.btnGoiMon = new System.Windows.Forms.Button();
@@ -78,7 +73,7 @@
             this.btnEspresso = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label25 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnCroissant = new System.Windows.Forms.Button();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.btnDonut = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
@@ -107,6 +102,23 @@
             this.label22 = new System.Windows.Forms.Label();
             this.btnTiramisu = new System.Windows.Forms.Button();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.txtGiaTien = new System.Windows.Forms.TextBox();
+            this.btnTru = new System.Windows.Forms.Button();
+            this.btnCong = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label231 = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtTenSanPham = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.dgvTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -143,7 +155,6 @@
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvTenMon,
             this.dgvGiaTien,
-            this.dgvMaBan,
             this.dgvSoLuong,
             this.dgvThanhTien});
             this.dgvHoaDon.Location = new System.Drawing.Point(959, 133);
@@ -153,41 +164,8 @@
             this.dgvHoaDon.RowTemplate.Height = 24;
             this.dgvHoaDon.Size = new System.Drawing.Size(680, 393);
             this.dgvHoaDon.TabIndex = 0;
-            // 
-            // dgvTenMon
-            // 
-            this.dgvTenMon.HeaderText = "Tên món";
-            this.dgvTenMon.MinimumWidth = 6;
-            this.dgvTenMon.Name = "dgvTenMon";
-            this.dgvTenMon.Width = 125;
-            // 
-            // dgvGiaTien
-            // 
-            this.dgvGiaTien.HeaderText = "Giá tiền";
-            this.dgvGiaTien.MinimumWidth = 6;
-            this.dgvGiaTien.Name = "dgvGiaTien";
-            this.dgvGiaTien.Width = 125;
-            // 
-            // dgvMaBan
-            // 
-            this.dgvMaBan.HeaderText = "Mã bàn";
-            this.dgvMaBan.MinimumWidth = 6;
-            this.dgvMaBan.Name = "dgvMaBan";
-            this.dgvMaBan.Width = 125;
-            // 
-            // dgvSoLuong
-            // 
-            this.dgvSoLuong.HeaderText = "Số lượng";
-            this.dgvSoLuong.MinimumWidth = 6;
-            this.dgvSoLuong.Name = "dgvSoLuong";
-            this.dgvSoLuong.Width = 125;
-            // 
-            // dgvThanhTien
-            // 
-            this.dgvThanhTien.HeaderText = "Thành tiền";
-            this.dgvThanhTien.MinimumWidth = 6;
-            this.dgvThanhTien.Name = "dgvThanhTien";
-            this.dgvThanhTien.Width = 125;
+            this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
+            this.dgvHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellContentClick);
             // 
             // label2
             // 
@@ -202,18 +180,19 @@
             // btnTinhTien
             // 
             this.btnTinhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTinhTien.Location = new System.Drawing.Point(959, 580);
+            this.btnTinhTien.Location = new System.Drawing.Point(977, 796);
             this.btnTinhTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTinhTien.Name = "btnTinhTien";
             this.btnTinhTien.Size = new System.Drawing.Size(123, 34);
             this.btnTinhTien.TabIndex = 2;
             this.btnTinhTien.Text = "Tính tiền";
             this.btnTinhTien.UseVisualStyleBackColor = true;
+            this.btnTinhTien.Click += new System.EventHandler(this.btnTinhTien_Click);
             // 
             // btnGoiMon
             // 
             this.btnGoiMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoiMon.Location = new System.Drawing.Point(1145, 580);
+            this.btnGoiMon.Location = new System.Drawing.Point(1117, 798);
             this.btnGoiMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGoiMon.Name = "btnGoiMon";
             this.btnGoiMon.Size = new System.Drawing.Size(123, 32);
@@ -325,6 +304,7 @@
             this.btnTravai.TabIndex = 14;
             this.btnTravai.Text = "29.000 đ ";
             this.btnTravai.UseVisualStyleBackColor = false;
+            this.btnTravai.Click += new System.EventHandler(this.btnTravai_Click);
             // 
             // label17
             // 
@@ -370,6 +350,7 @@
             this.btnTradaocamsa.TabIndex = 13;
             this.btnTradaocamsa.Text = "29.000 đ ";
             this.btnTradaocamsa.UseVisualStyleBackColor = false;
+            this.btnTradaocamsa.Click += new System.EventHandler(this.btnTradaocamsa_Click);
             // 
             // pictureBox15
             // 
@@ -393,6 +374,7 @@
             this.btnSuachuaphucbontu.TabIndex = 12;
             this.btnSuachuaphucbontu.Text = "29.000 đ ";
             this.btnSuachuaphucbontu.UseVisualStyleBackColor = false;
+            this.btnSuachuaphucbontu.Click += new System.EventHandler(this.btnSuachuaphucbontu_Click);
             // 
             // label13
             // 
@@ -426,6 +408,7 @@
             this.btnSuachuanepcam.TabIndex = 11;
             this.btnSuachuanepcam.Text = "29.000 đ ";
             this.btnSuachuanepcam.UseVisualStyleBackColor = false;
+            this.btnSuachuanepcam.Click += new System.EventHandler(this.btnSuachuanepcam_Click);
             // 
             // label14
             // 
@@ -471,6 +454,7 @@
             this.btnCaphetrung.TabIndex = 10;
             this.btnCaphetrung.Text = "29.000 đ ";
             this.btnCaphetrung.UseVisualStyleBackColor = false;
+            this.btnCaphetrung.Click += new System.EventHandler(this.btnCaphetrung_Click);
             // 
             // pictureBox12
             // 
@@ -494,6 +478,7 @@
             this.btnBacxiu.TabIndex = 9;
             this.btnBacxiu.Text = "29.000 đ ";
             this.btnBacxiu.UseVisualStyleBackColor = false;
+            this.btnBacxiu.Click += new System.EventHandler(this.btnBacxiu_Click);
             // 
             // label10
             // 
@@ -527,6 +512,7 @@
             this.btnCaphephin.TabIndex = 8;
             this.btnCaphephin.Text = "29.000 đ ";
             this.btnCaphephin.UseVisualStyleBackColor = false;
+            this.btnCaphephin.Click += new System.EventHandler(this.btnCaphephin_Click);
             // 
             // label11
             // 
@@ -572,6 +558,7 @@
             this.btnCaphesuanong.TabIndex = 7;
             this.btnCaphesuanong.Text = "25.000 đ ";
             this.btnCaphesuanong.UseVisualStyleBackColor = false;
+            this.btnCaphesuanong.Click += new System.EventHandler(this.btnCaphesuanong_Click);
             // 
             // pictureBox9
             // 
@@ -595,6 +582,7 @@
             this.btnCaphesuada.TabIndex = 6;
             this.btnCaphesuada.Text = "25.000 đ ";
             this.btnCaphesuada.UseVisualStyleBackColor = false;
+            this.btnCaphesuada.Click += new System.EventHandler(this.btnCaphesuada_Click);
             // 
             // label7
             // 
@@ -628,6 +616,7 @@
             this.btnCaphedenda.TabIndex = 5;
             this.btnCaphedenda.Text = "25.000 đ ";
             this.btnCaphedenda.UseVisualStyleBackColor = false;
+            this.btnCaphedenda.Click += new System.EventHandler(this.btnCaphedenda_Click);
             // 
             // label8
             // 
@@ -729,6 +718,7 @@
             this.btnCapuccino.TabIndex = 2;
             this.btnCapuccino.Text = "39.000 đ ";
             this.btnCapuccino.UseVisualStyleBackColor = false;
+            this.btnCapuccino.Click += new System.EventHandler(this.btnCapuccino_Click);
             // 
             // label5
             // 
@@ -778,7 +768,7 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.btnCroissant);
             this.tabPage2.Controls.Add(this.pictureBox23);
             this.tabPage2.Controls.Add(this.btnDonut);
             this.tabPage2.Controls.Add(this.label26);
@@ -827,17 +817,18 @@
             this.label25.TabIndex = 47;
             this.label25.Text = "Croissant";
             // 
-            // button9
+            // btnCroissant
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(43, 1095);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(136, 46);
-            this.button9.TabIndex = 41;
-            this.button9.Text = "19.000 đ ";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnCroissant.BackColor = System.Drawing.Color.White;
+            this.btnCroissant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCroissant.Location = new System.Drawing.Point(43, 1095);
+            this.btnCroissant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCroissant.Name = "btnCroissant";
+            this.btnCroissant.Size = new System.Drawing.Size(136, 46);
+            this.btnCroissant.TabIndex = 41;
+            this.btnCroissant.Text = "19.000 đ ";
+            this.btnCroissant.UseVisualStyleBackColor = false;
+            this.btnCroissant.Click += new System.EventHandler(this.btnCroissant_Click);
             // 
             // pictureBox23
             // 
@@ -861,6 +852,7 @@
             this.btnDonut.TabIndex = 40;
             this.btnDonut.Text = "15.000 đ ";
             this.btnDonut.UseVisualStyleBackColor = false;
+            this.btnDonut.Click += new System.EventHandler(this.btnDonut_Click);
             // 
             // label26
             // 
@@ -894,6 +886,7 @@
             this.btnCookies.TabIndex = 38;
             this.btnCookies.Text = "9.000 đ ";
             this.btnCookies.UseVisualStyleBackColor = false;
+            this.btnCookies.Click += new System.EventHandler(this.btnCookies_Click);
             // 
             // label27
             // 
@@ -961,6 +954,7 @@
             this.btnChocolateTarts.TabIndex = 26;
             this.btnChocolateTarts.Text = "15.000 đ ";
             this.btnChocolateTarts.UseVisualStyleBackColor = false;
+            this.btnChocolateTarts.Click += new System.EventHandler(this.btnChocolateTarts_Click);
             // 
             // label1
             // 
@@ -1038,6 +1032,7 @@
             this.btnMuffin.TabIndex = 23;
             this.btnMuffin.Text = "20.000 đ ";
             this.btnMuffin.UseVisualStyleBackColor = false;
+            this.btnMuffin.Click += new System.EventHandler(this.btnMuffin_Click);
             // 
             // pictureBox17
             // 
@@ -1061,6 +1056,7 @@
             this.btnMoussecake.TabIndex = 22;
             this.btnMoussecake.Text = "39.000 đ ";
             this.btnMoussecake.UseVisualStyleBackColor = false;
+            this.btnMoussecake.Click += new System.EventHandler(this.btnMoussecake_Click);
             // 
             // label20
             // 
@@ -1094,6 +1090,7 @@
             this.btnMaracon.TabIndex = 20;
             this.btnMaracon.Text = "9.000 đ ";
             this.btnMaracon.UseVisualStyleBackColor = false;
+            this.btnMaracon.Click += new System.EventHandler(this.btnMaracon_Click);
             // 
             // label21
             // 
@@ -1137,6 +1134,7 @@
             this.btnTiramisu.TabIndex = 18;
             this.btnTiramisu.Text = "39.000 đ ";
             this.btnTiramisu.UseVisualStyleBackColor = false;
+            this.btnTiramisu.Click += new System.EventHandler(this.btnTiramisu_Click);
             // 
             // pictureBox20
             // 
@@ -1149,12 +1147,171 @@
             this.pictureBox20.TabIndex = 16;
             this.pictureBox20.TabStop = false;
             // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(1530, 804);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(110, 25);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(1396, 805);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(110, 25);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(1264, 804);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(110, 25);
+            this.btnThem.TabIndex = 12;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(1539, 531);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(100, 22);
+            this.txtTongTien.TabIndex = 13;
+            // 
+            // txtGiaTien
+            // 
+            this.txtGiaTien.Location = new System.Drawing.Point(1493, 654);
+            this.txtGiaTien.Name = "txtGiaTien";
+            this.txtGiaTien.Size = new System.Drawing.Size(100, 22);
+            this.txtGiaTien.TabIndex = 19;
+            // 
+            // btnTru
+            // 
+            this.btnTru.Enabled = false;
+            this.btnTru.Location = new System.Drawing.Point(1443, 689);
+            this.btnTru.Name = "btnTru";
+            this.btnTru.Size = new System.Drawing.Size(44, 22);
+            this.btnTru.TabIndex = 17;
+            this.btnTru.Text = "-";
+            this.btnTru.UseVisualStyleBackColor = true;
+            this.btnTru.Click += new System.EventHandler(this.btnTru_Click);
+            // 
+            // btnCong
+            // 
+            this.btnCong.Enabled = false;
+            this.btnCong.Location = new System.Drawing.Point(1599, 689);
+            this.btnCong.Name = "btnCong";
+            this.btnCong.Size = new System.Drawing.Size(41, 22);
+            this.btnCong.TabIndex = 18;
+            this.btnCong.Text = "+";
+            this.btnCong.UseVisualStyleBackColor = true;
+            this.btnCong.Click += new System.EventHandler(this.btnCong_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(1316, 657);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(58, 16);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "Giá Tiền";
+            // 
+            // label231
+            // 
+            this.label231.AutoSize = true;
+            this.label231.Location = new System.Drawing.Point(1316, 689);
+            this.label231.Name = "label231";
+            this.label231.Size = new System.Drawing.Size(63, 16);
+            this.label231.TabIndex = 16;
+            this.label231.Text = "Số lượng ";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Enabled = false;
+            this.txtSoLuong.Location = new System.Drawing.Point(1493, 689);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(100, 22);
+            this.txtSoLuong.TabIndex = 14;
+            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(954, 642);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 16);
+            this.label24.TabIndex = 15;
+            // 
+            // txtTenSanPham
+            // 
+            this.txtTenSanPham.Location = new System.Drawing.Point(1090, 657);
+            this.txtTenSanPham.Name = "txtTenSanPham";
+            this.txtTenSanPham.Size = new System.Drawing.Size(162, 22);
+            this.txtTenSanPham.TabIndex = 19;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(974, 657);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(96, 16);
+            this.label29.TabIndex = 15;
+            this.label29.Text = "Tên Sản Phẩm";
+            // 
+            // dgvTenMon
+            // 
+            this.dgvTenMon.HeaderText = "Tên món";
+            this.dgvTenMon.MinimumWidth = 6;
+            this.dgvTenMon.Name = "dgvTenMon";
+            this.dgvTenMon.Width = 125;
+            // 
+            // dgvGiaTien
+            // 
+            this.dgvGiaTien.HeaderText = "Giá tiền";
+            this.dgvGiaTien.MinimumWidth = 6;
+            this.dgvGiaTien.Name = "dgvGiaTien";
+            this.dgvGiaTien.Width = 125;
+            // 
+            // dgvSoLuong
+            // 
+            this.dgvSoLuong.HeaderText = "Số lượng";
+            this.dgvSoLuong.MinimumWidth = 6;
+            this.dgvSoLuong.Name = "dgvSoLuong";
+            this.dgvSoLuong.Width = 125;
+            // 
+            // dgvThanhTien
+            // 
+            this.dgvThanhTien.HeaderText = "Thành tiền";
+            this.dgvThanhTien.MinimumWidth = 6;
+            this.dgvThanhTien.Name = "dgvThanhTien";
+            this.dgvThanhTien.Width = 125;
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1699, 750);
+            this.ClientSize = new System.Drawing.Size(1699, 871);
+            this.Controls.Add(this.txtTenSanPham);
+            this.Controls.Add(this.txtGiaTien);
+            this.Controls.Add(this.btnTru);
+            this.Controls.Add(this.btnCong);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label231);
+            this.Controls.Add(this.txtSoLuong);
+            this.Controls.Add(this.txtTongTien);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnGoiMon);
             this.Controls.Add(this.btnTinhTien);
@@ -1203,11 +1360,6 @@
         
 
             private System.Windows.Forms.DataGridView dgvHoaDon;
-            private System.Windows.Forms.DataGridViewTextBoxColumn dgvTenMon;
-            private System.Windows.Forms.DataGridViewTextBoxColumn dgvGiaTien;
-            private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaBan;
-            private System.Windows.Forms.DataGridViewTextBoxColumn dgvSoLuong;
-            private System.Windows.Forms.DataGridViewTextBoxColumn dgvThanhTien;
             private System.Windows.Forms.Label label2;
             private System.Windows.Forms.Button btnTinhTien;
             private System.Windows.Forms.Button btnGoiMon;
@@ -1276,7 +1428,7 @@
         private System.Windows.Forms.Button btnTiramisu;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnCroissant;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.Button btnDonut;
         private System.Windows.Forms.Label label26;
@@ -1287,5 +1439,22 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btnFlan;
         private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.TextBox txtGiaTien;
+        private System.Windows.Forms.Button btnTru;
+        private System.Windows.Forms.Button btnCong;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label231;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtTenSanPham;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvGiaTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvThanhTien;
     }
 }
