@@ -15,28 +15,5 @@ namespace QuanLyQuanCaffee
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmCuaHang());
         }
-        //ádjfkhaskdjf 
-        //fghjkdh
-        //sfd 
-        //Tôi là thanh vưa 
-        //Xin chao 1
-        //Tôi là Bùi Văn Sơn
-        //Hoàn thành nha
->>>>>>>>> Temporary merge branch 2
-        //Tôi là thanh vưa 
-        //Xin chao 1
-        //Tôi là Bùi Văn Sơn
-        //Hoàn thành nha
->>>>>>>>> Temporary merge branch 2
-        //Tôi là thanh vưa 
-        //Xin chao 1
-        //Tôi là Bùi Văn Sơn
-        //Hoàn thành nha
->>>>>>>>> Temporary merge branch 2
-        //Tôi là thanh vưa 
-        //Xin chao 1
-        //Tôi là Bùi Văn Sơn
-        //Hoàn thành nha
->>>>>>>>> Temporary merge branch 2
-    }
+     }
 }
