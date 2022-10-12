@@ -19,7 +19,7 @@ namespace QuanLyQuanCaffee
 
         private void Sanpham_Load(object sender, EventArgs e)
         {
-
+            btnAmericano.Enabled = false;
         }
 
         private void btnCupcake_Click(object sender, EventArgs e)
@@ -46,7 +46,14 @@ namespace QuanLyQuanCaffee
         {
 
         }
+
+        private void btnGoiMon_Click(object sender, EventArgs e)
+        {
+            btnAmericano.Enabled = true;
+
+        }
     }
+    
 }
 //////////////////////////////////
 // Code SQL bảng MenuDinks + MenuBakery
