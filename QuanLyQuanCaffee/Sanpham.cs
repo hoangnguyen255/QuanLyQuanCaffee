@@ -9,6 +9,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZXing.Common;
+using ZXing.QrCode.Internal;
+using ZXing.Rendering;
+using ZXing;
+using System.Drawing.Drawing2D;
 
 namespace QuanLyQuanCaffee
 {
@@ -81,7 +86,9 @@ namespace QuanLyQuanCaffee
         {
             enableFalse();
             txtSoLuong.Text = 1.ToString();
+            txtTongTien.Text = 0.ToString();
             
+
         }
         public bool ketnoi(String server, String database)// ktra ket noi thanh cong hay ko?
         {
@@ -118,7 +125,14 @@ namespace QuanLyQuanCaffee
                 return new DataTable();// new truy van khong duoc tra ve 1 bang rong
             }
         }
-
+        public Image resizeImage(Image image, int new_height, int new_width)
+        {
+            Bitmap new_image = new Bitmap(new_width, new_height);
+            Graphics g = Graphics.FromImage((Image)new_image);
+            g.InterpolationMode = InterpolationMode.High;
+            g.DrawImage(image, 0, 0, new_width, new_height);
+            return new_image;
+        }
         bool themxoasua(string s)
         {
             try
@@ -548,10 +562,25 @@ namespace QuanLyQuanCaffee
 
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= dgvHoaDon.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvHoaDon.Rows.Count-1 ; i++)
+
             {
-                txtTongTien.Text = (int.Parse(txtTongTien.Text) + int.Parse(dgvHoaDon.Rows[i].Cells[4].Value.ToString())).ToString();
+                 
+                txtTongTien.Text = (int.Parse(txtTongTien.Text) +int.Parse(dgvHoaDon.Rows[i].Cells[3].Value.ToString())).ToString();
             }
+            var qrcode_text = $"2|99|{"0946786967"}|0|0|{txtTongTien.Text.Trim()}";//gán dữ liệu cho biến string qrcode_text
+
+            BarcodeWriter barcodeWriter = new BarcodeWriter();//khởi tao 1 biến viết mã 
+            EncodingOptions encodingOptions = new EncodingOptions() { Width = 200, Height = 200, Margin = 0, PureBarcode = false };//khơi tạo 1 mã có dài và rộng là 200
+            encodingOptions.Hints.Add(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
+            barcodeWriter.Renderer = new BitmapRenderer();//khởi tạo kết xuất mã được kết xuất bằng bitmap
+            barcodeWriter.Options = encodingOptions;//khởi tạo tùy chọn mã hóa
+            barcodeWriter.Format = BarcodeFormat.QR_CODE;//khởi tạp format mã hóa là 1 mã qr
+            Bitmap bitmap = barcodeWriter.Write(qrcode_text);//khởi tạo 1 biến bitmap có chứa dữ liệu của qrcode_text;
+            Bitmap logo = resizeImage(Properties.Resources.logo_momo, 64, 64) as Bitmap;//gán cái logo của mogo có được truyền vào khu vưc có dài và rộng =64
+            Graphics g = Graphics.FromImage(bitmap);//khởi tạo 1 đồ họa g là 1 from image có dữ liệu của bitmap
+            g.DrawImage(logo, new Point((bitmap.Width - logo.Width) / 2, (bitmap.Height - logo.Height) / 2));//vẽ các điểm 
+            picQRPay.Image = bitmap;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
