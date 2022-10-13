@@ -33,10 +33,18 @@ namespace QuanLyQuanCaffee
                 frmSanPham sp = new frmSanPham();
                 sp.MdiParent = this;
                 sp.Show();
-
-
-
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "QuanLySanPham")
+                {
+                    f.Activate();
+                    return;
+                }
             }
+
+
+
+        }
 
             //Form cửa hàng khi load lên
             private void frmCuaHang_Load(object sender, EventArgs e)

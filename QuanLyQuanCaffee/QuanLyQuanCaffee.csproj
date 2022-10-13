@@ -138,6 +138,7 @@
     <Content Include="images\delete.png" />
     <Content Include="images\find.png" />
     <Content Include="images\fix.png" />
+    <None Include="Resources\Exit.png" />
     <None Include="Resources\logo_momo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
