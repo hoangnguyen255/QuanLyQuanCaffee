@@ -32,9 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
-            this.cmbQuyen = new System.Windows.Forms.ComboBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnTaoTaiKhoan = new System.Windows.Forms.Button();
@@ -74,37 +72,13 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Mật khẩu";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(93, 314);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Quyền";
-            // 
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Location = new System.Drawing.Point(174, 210);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(251, 26);
-            this.txtTenDangNhap.TabIndex = 2;
-            // 
-            // cmbQuyen
-            // 
-            this.cmbQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbQuyen.FormattingEnabled = true;
-            this.cmbQuyen.Items.AddRange(new object[] {
-            "Khách hàng",
-            "Nhân viên",
-            "Quản lý"});
-            this.cmbQuyen.Location = new System.Drawing.Point(174, 311);
-            this.cmbQuyen.Name = "cmbQuyen";
-            this.cmbQuyen.Size = new System.Drawing.Size(251, 28);
-            this.cmbQuyen.TabIndex = 3;
+            this.txtTenDangNhap.TabIndex = 1;
             // 
             // txtMatKhau
             // 
@@ -117,10 +91,10 @@
             // btnDangNhap
             // 
             this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(310, 364);
+            this.btnDangNhap.Location = new System.Drawing.Point(310, 312);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(115, 32);
-            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -128,7 +102,7 @@
             // btnTaoTaiKhoan
             // 
             this.btnTaoTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(248, 412);
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(248, 365);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             this.btnTaoTaiKhoan.Size = new System.Drawing.Size(177, 32);
             this.btnTaoTaiKhoan.TabIndex = 4;
@@ -139,7 +113,7 @@
             // btnDangNhapKCMK
             // 
             this.btnDangNhapKCMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhapKCMK.Location = new System.Drawing.Point(97, 460);
+            this.btnDangNhapKCMK.Location = new System.Drawing.Point(97, 421);
             this.btnDangNhapKCMK.Name = "btnDangNhapKCMK";
             this.btnDangNhapKCMK.Size = new System.Drawing.Size(328, 32);
             this.btnDangNhapKCMK.TabIndex = 5;
@@ -157,10 +131,8 @@
             this.Controls.Add(this.btnDangNhapKCMK);
             this.Controls.Add(this.btnTaoTaiKhoan);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.cmbQuyen);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDangNhap);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -178,9 +150,7 @@
             private System.Windows.Forms.Label label1;
             private System.Windows.Forms.Label label2;
             private System.Windows.Forms.Label label3;
-            private System.Windows.Forms.Label label4;
             private System.Windows.Forms.TextBox txtTenDangNhap;
-            private System.Windows.Forms.ComboBox cmbQuyen;
             private System.Windows.Forms.TextBox txtMatKhau;
             private System.Windows.Forms.Button btnDangNhap;
             private System.Windows.Forms.Button btnTaoTaiKhoan;

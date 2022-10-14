@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyQuanCaffee
 {
@@ -17,30 +18,29 @@ namespace QuanLyQuanCaffee
             InitializeComponent();
         }
         //
-
-            //Form đăng nhập hiện lên lúc bắt đầu
-            private void Form1_Load(object sender, EventArgs e)
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-K542EP2\NNH;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
+        //Form đăng nhập hiện lên lúc bắt đầu
+        private void Form1_Load(object sender, EventArgs e)
             {
-                cmbQuyen.SelectedIndex = 0;
+            }
+       
+        public static string ID_USER = "";
+        //Sự kiện khi nhấn vào nút đăng nhập
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {           
+            ID_USER = getID(txtTenDangNhap.Text, txtMatKhau.Text);
+            if (ID_USER != "")
+            {             
+                frmCuaHang frm = new frmCuaHang();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản và mật khẩu không đúng !");
             }
 
-            //Sự kiện khi nhấn vào nút đăng nhập
-            private void btnDangNhap_Click(object sender, EventArgs e)
-            {
-                //Chặn người dùng đăng nhập khi chưa nhập giá trị cho ô tên đăng nhập và mật khẩu
-                if (txtTenDangNhap.Text == "" && txtMatKhau.Text == "")
-                {
-                    MessageBox.Show("Nhập đầy đủ thông tin!", "Thông báo");
-                }
-                else
-                {
-                    //Hiện form cửa hàng ra
-                    frmCuaHang ch = new frmCuaHang();
-                    this.Hide();
-                    ch.ShowDialog();
-                }
-
-            }
+        }
 
             //Sự kiện khi nhấn vào nút tạo tài khoản
             private void btnTaoTaiKhoan_Click(object sender, EventArgs e)
@@ -59,5 +59,35 @@ namespace QuanLyQuanCaffee
                 frm.ShowDialog();
 
             }
+        private string getID(string username, string pass)
+        {
+            string id = "";
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM tbl_user WHERE user_name ='" + username + "' and pass='" + pass + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        id = dr["id_user"].ToString();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
+            }
+            finally
+            {
+                con.Close();
+            }
+            return id;
+
         }
+        
+    }
 }

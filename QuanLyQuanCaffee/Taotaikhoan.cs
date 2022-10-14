@@ -19,7 +19,7 @@ namespace QuanLyQuanCaffee
         //
             private void btnTaoTaiKhoan_Click(object sender, EventArgs e)
             {
-                if (txtTenDangNhap.Text == "" && txtSoDienThoai.Text == "" && txtNhapLaiMatKhau.Text == "" && txtMatKhau.Text == "" && txtEmail.Text == "" && txtDiaChi.Text == "")
+                if (txtID.Text == "" && txtMatkhau.Text == "" && txtTendangnhap.Text == "" && txtTennguoidung.Text == "" )
                 {
                     MessageBox.Show("Chưa nhập giá trị", "Thông báo");
                 }
