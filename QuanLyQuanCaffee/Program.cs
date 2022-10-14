@@ -13,7 +13,7 @@ namespace QuanLyQuanCaffee
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCuaHang());
+            Application.Run(new frmDangNhap());
         }
      }
 }

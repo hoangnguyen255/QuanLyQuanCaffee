@@ -25,7 +25,7 @@ namespace QuanLyQuanCaffee
 
         private void QuanLySanPham_Load(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 laydulieu_len_DataGridView();
                 NapMaHangVaoComboBox();
@@ -128,7 +128,7 @@ namespace QuanLyQuanCaffee
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
@@ -166,7 +166,7 @@ namespace QuanLyQuanCaffee
         {
 
             
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -194,7 +194,7 @@ namespace QuanLyQuanCaffee
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
@@ -225,7 +225,7 @@ namespace QuanLyQuanCaffee
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
@@ -261,6 +261,11 @@ namespace QuanLyQuanCaffee
             {
                 this.Close();
             }
+        }
+
+        private void cmbMaHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

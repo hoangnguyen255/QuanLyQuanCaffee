@@ -89,5 +89,11 @@ namespace QuanLyQuanCaffee
             QuanLySanPham frm = new QuanLySanPham();
             frm.ShowDialog();
         }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSanPham frm = new frmSanPham();
+            frm.ShowDialog();
+        }
     }
 }

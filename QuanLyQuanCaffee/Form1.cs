@@ -30,7 +30,7 @@ namespace QuanLyQuanCaffee
                 //Chặn người dùng đăng nhập khi chưa nhập giá trị cho ô tên đăng nhập và mật khẩu
                 if (txtTenDangNhap.Text == "" && txtMatKhau.Text == "")
                 {
-                    MessageBox.Show("Chưa nhập giá trị", "Thông báo");
+                    MessageBox.Show("Nhập đầy đủ thông tin!", "Thông báo");
                 }
                 else
                 {
