@@ -196,7 +196,13 @@ namespace QuanLyQuanCaffee
             return check;
         }
 
-        
+        private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongKeDoanhThu thongke = new ThongKeDoanhThu();
+            thongke.ShowDialog();   
+        }
+
+
 
         //private void button1_Click(object sender, EventArgs e)
         //{

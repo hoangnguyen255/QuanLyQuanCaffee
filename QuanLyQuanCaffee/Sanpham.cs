@@ -836,4 +836,24 @@ namespace QuanLyQuanCaffee
 //GO
 //ALTER DATABASE [QuanLyQuanCaffee] SET READ_WRITE 
 //GO
-    
+//USE [QuanLyQuanCaffee]
+//GO
+///****** Object:  Table [dbo].[HOADON]    Script Date: 10/16/2022 12:20:23 AM ******/
+//SET ANSI_NULLS ON
+//GO
+//SET QUOTED_IDENTIFIER ON
+//GO
+//CREATE TABLE [dbo].[HOADON] (
+
+//    [MaHD][int] IDENTITY(1, 1) NOT NULL,
+
+//    [Ngay] [datetime] NULL,
+//	[TongTien][int] NULL,
+// CONSTRAINT[PK_testHD] PRIMARY KEY CLUSTERED 
+//(
+
+//    [MaHD] ASC
+//)WITH(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON[PRIMARY]
+//) ON[PRIMARY]
+//GO
+
