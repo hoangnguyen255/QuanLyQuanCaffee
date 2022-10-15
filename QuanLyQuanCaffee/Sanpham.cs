@@ -229,7 +229,12 @@ namespace QuanLyQuanCaffee
         {
             groupBox1.Enabled = true;
             enableTrue();
+            dgvHoaDon.Rows.Clear();
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+            btnTinhTien.Enabled = false;
 
+            txtTongTien.Text = 0.ToString();
         }
 
         private void btnCapuccino_Click(object sender, EventArgs e)
@@ -551,24 +556,28 @@ namespace QuanLyQuanCaffee
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-                int index=dgvHoaDon.Rows.Add();
+            int index = dgvHoaDon.Rows.Add();
 
-                dgvHoaDon.Rows[index].Cells[0].Value = txtTenSanPham.Text;
-                dgvHoaDon.Rows[index].Cells[1].Value = txtGiaTien.Text;
-                dgvHoaDon.Rows[index].Cells[2].Value = txtSoLuong.Text;
-                dgvHoaDon.Rows[index].Cells[3].Value = (int.Parse(txtSoLuong.Text) * int.Parse(txtGiaTien.Text));
-            
+            dgvHoaDon.Rows[index].Cells[0].Value = txtTenSanPham.Text;
+            dgvHoaDon.Rows[index].Cells[1].Value = txtGiaTien.Text;
+            dgvHoaDon.Rows[index].Cells[2].Value = txtSoLuong.Text;
+            dgvHoaDon.Rows[index].Cells[3].Value = (int.Parse(txtSoLuong.Text) * int.Parse(txtGiaTien.Text));
+            txtTongTien.Text = 0.ToString();
+            btnXoa.Enabled = true;
+            btnTinhTien.Enabled = true;
+            btnSua.Enabled = true;
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
         {
+            //Tính tổng tiền
             for (int i = 0; i < dgvHoaDon.Rows.Count-1 ; i++)
 
             {
                  
                 txtTongTien.Text = (int.Parse(txtTongTien.Text) +int.Parse(dgvHoaDon.Rows[i].Cells[3].Value.ToString())).ToString();
             }
+            //Tạo MÃ QR MoMo
             var qrcode_text = $"2|99|{"0946786967"}|||0|0|{txtTongTien.Text.Trim()}";//gán dữ liệu cho biến string qrcode_text
 
             BarcodeWriter barcodeWriter = new BarcodeWriter();//khởi tao 1 biến viết mã 
@@ -582,6 +591,22 @@ namespace QuanLyQuanCaffee
             Graphics g = Graphics.FromImage(bitmap);//khởi tạo 1 đồ họa g là 1 from image có dữ liệu của bitmap
             g.DrawImage(logo, new Point((bitmap.Width - logo.Width) / 2, (bitmap.Height - logo.Height) / 2));//vẽ các điểm 
             picQRPay.Image = bitmap;
+
+            //Lưu Hoá đơn vào SQL
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            {
+                MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            DateTime ngay = DateTime.Now;
+            string tt = int.Parse(txtTongTien.Text).ToString();
+            string s = "insert into HOADON values(N'" + ngay + "',N'" + tt + "')";
+            themxoasua(s);
+            enableFalse();
+            btnTinhTien.Enabled = false;
+            btnThem.Enabled = false;
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -638,7 +663,7 @@ namespace QuanLyQuanCaffee
             dgvHoaDon.Rows[selectedRow].Cells[1].Value = txtGiaTien.Text;
             dgvHoaDon.Rows[selectedRow].Cells[2].Value = txtSoLuong.Text;
             dgvHoaDon.Rows[selectedRow].Cells[3].Value = (int.Parse(txtSoLuong.Text) * int.Parse(txtGiaTien.Text));
-
+            txtTongTien.Text = 0.ToString();
         }
 
         private void txtTongTien_TextChanged(object sender, EventArgs e)

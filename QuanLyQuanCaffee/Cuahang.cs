@@ -94,7 +94,7 @@ namespace QuanLyQuanCaffee
 
         private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuanLySanPham frm = new QuanLySanPham();
+            QuanLyNguyenLieu frm = new QuanLyNguyenLieu();
             frm.ShowDialog();
         }
 

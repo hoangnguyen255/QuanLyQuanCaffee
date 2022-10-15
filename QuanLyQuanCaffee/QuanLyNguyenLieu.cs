@@ -14,11 +14,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QuanLyQuanCaffee
 {
-    public partial class QuanLySanPham : Form
+    public partial class QuanLyNguyenLieu : Form
     {
         SqlConnection con;
         
-        public QuanLySanPham()
+        public QuanLyNguyenLieu()
         {
             InitializeComponent();
         }

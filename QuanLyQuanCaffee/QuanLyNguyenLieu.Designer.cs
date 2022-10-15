@@ -1,6 +1,6 @@
 ﻿namespace QuanLyQuanCaffee
 {
-    partial class QuanLySanPham
+    partial class QuanLyNguyenLieu
     {
         /// <summary>
         /// Required designer variable.
