@@ -18,7 +18,7 @@ namespace QuanLyQuanCaffee
             InitializeComponent();
         }
         //
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-K542EP2\NNH;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-M0KCUVC\BVSONXNB;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
         //Form đăng nhập hiện lên lúc bắt đầu
         private void Form1_Load(object sender, EventArgs e)
             {

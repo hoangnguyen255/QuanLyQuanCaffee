@@ -25,7 +25,7 @@ namespace QuanLyQuanCaffee
 
         private void QuanLySanPham_Load(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 laydulieu_len_DataGridView();
                 NapMaHangVaoComboBox();
@@ -68,6 +68,8 @@ namespace QuanLyQuanCaffee
                 dataGridView1.Rows[index].Cells[1].Value = dt.Rows[i][1].ToString();
                 dataGridView1.Rows[index].Cells[2].Value = dt.Rows[i][2].ToString();
                 dataGridView1.Rows[index].Cells[3].Value = dt.Rows[i][3].ToString();
+                dataGridView1.Rows[index].Cells[4].Value = dt.Rows[i][4].ToString();
+
 
             }
         }
@@ -119,33 +121,62 @@ namespace QuanLyQuanCaffee
             txtGiaTien.Clear();
             txtTenHang.Clear();
             txtNhaCungCap.Clear();
+            txtSoluong.Clear();
             cmbMaHang.Text = "";
         }
-        void reset()
+        public bool checkRong()
         {
-            txtGiaTien.Text = txtNhaCungCap.Text = txtTenHang.Text = "";
-            cmbMaHang.SelectedIndex = 0 ;
+            if(txtGiaTien.Text == "" || txtTenHang.Text == "" || txtNhaCungCap.Text == "" 
+              || txtSoluong.Text == "" || txtGia.Text == "" || cmbMaHang.Text == "")
+            {
+                return true;
+            }
+            return false;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (checkRong())
             {
-                MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            string th = txtTenHang.Text;
-            string gt = txtGiaTien.Text;
-            string ncc = txtNhaCungCap.Text;
-            string mh = cmbMaHang.Text;
-            string s = "insert into SanPham values(N'" + mh + "',N'" + th + "',N'" + ncc + "','" + gt + "')";
-            if (themxoasua(s) == true)
+            else
             {
-                dataGridView1.Rows.Clear();
-                laydulieu_len_DataGridView();
+                if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+                {
+                    MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+                if (int.Parse(txtGiaTien.Text) < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập lại giá tiền(không âm)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                if (int.Parse(txtSoluong.Text) < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập lại số lượng(không âm)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string th = txtTenHang.Text;
+                    string gt = txtGiaTien.Text;
+                    string ncc = txtNhaCungCap.Text;
+                    string mh = cmbMaHang.Text;
+                    string slt = int.Parse(txtSoluong.Text).ToString();
+                    string s = "insert into SanPham values(N'" + mh + "',N'" + th + "',N'" + ncc + "','" + gt + "','" + slt + "')";
+                    if (themxoasua(s) == true)
+                    {
+                        dataGridView1.Rows.Clear();
+                        laydulieu_len_DataGridView();
+                    }
+                    xoa();
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                }              
+                }
+                
             }
-            reset();
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -157,6 +188,7 @@ namespace QuanLyQuanCaffee
                 txtTenHang.Text = row.Cells[1].Value.ToString();
                 txtNhaCungCap.Text = row.Cells[2].Value.ToString();
                 txtGiaTien.Text = row.Cells[3].Value.ToString();
+                txtSoluong.Text = row.Cells[4].Value.ToString();    
             }
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
@@ -166,7 +198,7 @@ namespace QuanLyQuanCaffee
         {
 
             
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -194,27 +226,52 @@ namespace QuanLyQuanCaffee
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (checkRong())
             {
-                MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                return;
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (dataGridView1.SelectedCells.Count == 0)
+            else
             {
-                MessageBox.Show(" Chưa chọn dòng dữ liệu cần cập nhật ");
-                return;
+                if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+                {
+                    MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    return;
+                }
+                if (int.Parse(txtGiaTien.Text) < 0)
+                {
+                    MessageBox.Show("Vui lòng nhập lại giá tiền(không âm)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (int.Parse(txtSoluong.Text) < 0)
+                    {
+                        MessageBox.Show("Vui lòng nhập lại số lượng(không âm)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (dataGridView1.SelectedCells.Count == 0)
+                        {
+                            MessageBox.Show(" Chưa chọn dòng dữ liệu cần cập nhật ");
+                            return;
+                        }
+                        string th = txtTenHang.Text;
+                        string ncc = txtNhaCungCap.Text;
+                        string gia = int.Parse(txtGiaTien.Text).ToString();
+                        string slt = int.Parse(txtSoluong.Text).ToString();
+                        string s = "update SanPham set TenHang = N'" + th + "',NhaCungCap ='" + ncc + "',Gia ='" + gia + "',SoLuongTon ='" + slt + "'where MaHang = N'" + cmbMaHang.Text + "'";
+                        //Console.WriteLine(s ) ;
+                        if (themxoasua(s) == true)
+                        {
+                            con.Close();
+                            dataGridView1.Rows.Clear();
+                            laydulieu_len_DataGridView();
+                        }
+                    }
+                }
+
             }
-            string th = txtTenHang.Text;
-            string ncc = txtNhaCungCap.Text;
-            string gia = int.Parse(txtGiaTien.Text).ToString();
-            string s = "update SanPham set TenHang = N'" + th + "',NhaCungCap ='" + ncc + "',Gia ='" + gia + "'where MaHang = N'" + cmbMaHang.Text + "'";
-            //Console.WriteLine(s ) ;
-            if (themxoasua(s) == true)
-            {
-                con.Close();
-                dataGridView1.Rows.Clear();
-                laydulieu_len_DataGridView();
-            }
+            
+            
 
         }
 
@@ -225,7 +282,7 @@ namespace QuanLyQuanCaffee
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
@@ -236,6 +293,7 @@ namespace QuanLyQuanCaffee
             s += "OR NhaCungCap like N'%" + tk + "%'";
             s += "OR Gia like N'%" + tk + "%'";
             s += "OR MaHang like N'%" + tk + "%'";
+            s += "OR SoLuongTon like N'%" + tk + "%'"; 
 
             if (themxoasua(s) == true)
             {
@@ -249,6 +307,7 @@ namespace QuanLyQuanCaffee
                     dataGridView1.Rows[index].Cells[1].Value = dt.Rows[i][1].ToString();
                     dataGridView1.Rows[index].Cells[2].Value = dt.Rows[i][2].ToString();
                     dataGridView1.Rows[index].Cells[3].Value = dt.Rows[i][3].ToString();
+                    dataGridView1.Rows[index].Cells[4].Value = dt.Rows[i][4].ToString();
 
                 }
             }
@@ -288,3 +347,4 @@ namespace QuanLyQuanCaffee
 //INSERT[dbo].[SanPham]([MaHang], [TenHang], [NhaCungCap], [Gia]) VALUES(N'Ma02                ', N'Bánh ngọt', N'Tiệm bánh thập cẩm ', 1000000)
 //INSERT[dbo].[SanPham]([MaHang], [TenHang], [NhaCungCap], [Gia]) VALUES(N'Ma03                ', N'Hộp trà các loại', N'Trà thái nguyên', 2000000)
 //GO
+

@@ -104,7 +104,7 @@ namespace QuanLyQuanCaffee
             frm.ShowDialog();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-K542EP2\NNH;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-M0KCUVC\BVSONXNB;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
         private string id_per(string id_user)
         {
             string id = "";

@@ -25,7 +25,7 @@ namespace QuanLyQuanCaffee
         {
             groupBox1.Enabled = false;
             btnLuu.Enabled = false;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 laydulieu_len_listview();
                 NapBangCapVaoComboBox();
@@ -188,7 +188,7 @@ namespace QuanLyQuanCaffee
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
@@ -217,7 +217,7 @@ namespace QuanLyQuanCaffee
                 MessageBox.Show("Hay chon mot dong de xoa");
                 return;
             }
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -243,7 +243,7 @@ namespace QuanLyQuanCaffee
             btnSua.Enabled = true;
             btnLuu.Enabled = true;
             //btnHuy.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;

@@ -153,7 +153,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCupcake'";
                 DataTable dt = new DataTable();
@@ -168,7 +168,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaEspresso'";
                 DataTable dt = new DataTable();
@@ -184,7 +184,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaMocha'";
                 DataTable dt = new DataTable();
@@ -199,7 +199,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaAmericano'";
                 DataTable dt = new DataTable();
@@ -214,7 +214,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaFlan'";
                 DataTable dt = new DataTable();
@@ -236,7 +236,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCapuccino'";
                 DataTable dt = new DataTable();
@@ -251,7 +251,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphedenda'";
                 DataTable dt = new DataTable();
@@ -266,7 +266,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphesuada'";
                 DataTable dt = new DataTable();
@@ -281,7 +281,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphesuanong'";
                 DataTable dt = new DataTable();
@@ -296,7 +296,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphephin'";
                 DataTable dt = new DataTable();
@@ -311,7 +311,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaBacXiu'";
                 DataTable dt = new DataTable();
@@ -326,7 +326,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphetrung'";
                 DataTable dt = new DataTable();
@@ -341,7 +341,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaSuachuanepcam'";
                 DataTable dt = new DataTable();
@@ -356,7 +356,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaSuachuaphucbontu'";
                 DataTable dt = new DataTable();
@@ -371,7 +371,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaTradaocamsa'";
                 DataTable dt = new DataTable();
@@ -386,7 +386,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaTravai'";
                 DataTable dt = new DataTable();
@@ -401,7 +401,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaTiramisu'";
                 DataTable dt = new DataTable();
@@ -416,7 +416,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMaracon'";
                 DataTable dt = new DataTable();
@@ -431,7 +431,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMoussecake'";
                 DataTable dt = new DataTable();
@@ -446,7 +446,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMuffin'";
                 DataTable dt = new DataTable();
@@ -461,7 +461,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaChocolateTarts'";
                 DataTable dt = new DataTable();
@@ -476,7 +476,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCookies'";
                 DataTable dt = new DataTable();
@@ -491,7 +491,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaDonut'";
                 DataTable dt = new DataTable();
@@ -506,7 +506,7 @@ namespace QuanLyQuanCaffee
         {
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCroissant'";
                 DataTable dt = new DataTable();
