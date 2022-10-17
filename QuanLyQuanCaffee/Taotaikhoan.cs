@@ -25,15 +25,16 @@ namespace QuanLyQuanCaffee
             
             if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
-                MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nhấn OK để thoát", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
             if (txtID.Text == "" && txtMatkhau.Text == "" && txtTendangnhap.Text == "" && txtTennguoidung.Text == "")
             {
-                MessageBox.Show("Chưa nhập giá trị", "Thông báo");
+                MessageBox.Show("Mời nhập đầy đủ giá trị!", "Thông báo");
             }
-            else
+            if(txtID.Text == 1.ToString() || txtID.Text == 2.ToString())
             {
+         
                 string id = txtID.Text;
                 string tnd = txtTennguoidung.Text;
                 string tdn = txtTendangnhap.Text;
@@ -45,6 +46,11 @@ namespace QuanLyQuanCaffee
                 }
                 reset();
             }
+            else { 
+            MessageBox.Show("ID chỉ được nhập 1 hoặc 2!", "Thông báo");
+        }
+            
+           
         }
 
         void reset()
