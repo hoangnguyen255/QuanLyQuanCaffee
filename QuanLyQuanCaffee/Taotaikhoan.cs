@@ -23,7 +23,7 @@ namespace QuanLyQuanCaffee
         private void btnTaoTaiKhoan_Click(object sender, EventArgs e)
         {
             
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhấn OK để thoát", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
@@ -83,7 +83,7 @@ namespace QuanLyQuanCaffee
         }
         private void frmTaoTaiKhoan_Load(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 //laydulieu_len_listview();
                 //NapBangCapVaoComboBox();

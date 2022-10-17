@@ -95,6 +95,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DBContentThongKe.cs" />
+    <Compile Include="Models\InBill.cs" />
     <Compile Include="Models\HOADON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,6 +185,8 @@
     <Content Include="images\delete.png" />
     <Content Include="images\find.png" />
     <Content Include="images\fix.png" />
+    <None Include="Resources\LogoQuan.bmp" />
+    <None Include="Resources\LogoQuan.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

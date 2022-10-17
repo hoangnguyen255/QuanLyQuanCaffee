@@ -27,7 +27,7 @@ namespace QuanLyQuanCaffee
         {
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
             {
                 laydulieu_len_DataGridView();
                 NapMaHangVaoComboBox();
@@ -142,7 +142,7 @@ namespace QuanLyQuanCaffee
             }
             else
             {
-                if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+                if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
                 {
                     MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Application.Exit();
@@ -199,7 +199,7 @@ namespace QuanLyQuanCaffee
         {
 
             
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -233,7 +233,7 @@ namespace QuanLyQuanCaffee
             }
             else
             {
-                if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+                if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
                 {
                     MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     return;
@@ -283,7 +283,7 @@ namespace QuanLyQuanCaffee
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
