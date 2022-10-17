@@ -25,7 +25,9 @@ namespace QuanLyQuanCaffee
 
         private void QuanLySanPham_Load(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            btnXoa.Enabled = false;
+            btnSua.Enabled = false;
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 laydulieu_len_DataGridView();
                 NapMaHangVaoComboBox();
@@ -35,8 +37,7 @@ namespace QuanLyQuanCaffee
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 Application.Exit();
             }
-            btnXoa.Enabled = false;
-            btnSua.Enabled = false;          
+                
         }
         public bool ketnoi(String server, String database)// ktra ket noi thanh cong hay ko?
         {
@@ -141,7 +142,7 @@ namespace QuanLyQuanCaffee
             }
             else
             {
-                if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+                if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
                 {
                     MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Application.Exit();
@@ -198,7 +199,7 @@ namespace QuanLyQuanCaffee
         {
 
             
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -232,7 +233,7 @@ namespace QuanLyQuanCaffee
             }
             else
             {
-                if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+                if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
                 {
                     MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     return;
@@ -282,7 +283,7 @@ namespace QuanLyQuanCaffee
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
@@ -316,13 +317,17 @@ namespace QuanLyQuanCaffee
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn thoát","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                this.Close();
-            }
+            frmCuaHang ch = new frmCuaHang();
+            this.Hide();
+            ch.Show();  
         }
 
         private void cmbMaHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

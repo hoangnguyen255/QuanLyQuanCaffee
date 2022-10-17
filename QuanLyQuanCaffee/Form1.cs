@@ -18,20 +18,17 @@ namespace QuanLyQuanCaffee
             InitializeComponent();
         }
         //
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-M0KCUVC\BVSONXNB;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
-        //Form đăng nhập hiện lên lúc bắt đầu
-        private void Form1_Load(object sender, EventArgs e)
-            {
-            }
-       
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-K542EP2\NNH;Initial Catalog=QuanLyQuanCaffee;Integrated Security=True");
+
         public static string ID_USER = "";
+
         //Sự kiện khi nhấn vào nút đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {           
             ID_USER = getID(txtTenDangNhap.Text, txtMatKhau.Text);
             if (ID_USER != "")
             {             
-                frmCuaHang frm = new frmCuaHang();
+                frmCuaHang frm = new frmCuaHang(frmDangNhap.ID_USER);
                 frm.Show();
                 this.Hide();
             }
@@ -39,26 +36,22 @@ namespace QuanLyQuanCaffee
             {
                 MessageBox.Show("Tài khoản và mật khẩu không đúng !");
             }
-
         }
 
-            //Sự kiện khi nhấn vào nút tạo tài khoản
-            private void btnTaoTaiKhoan_Click(object sender, EventArgs e)
-            {
-                //Hiện frm tạo tài khoản
-                frmTaoTaiKhoan frm = new frmTaoTaiKhoan();
-                frm.ShowDialog();
-            }
+        //Sự kiện khi nhấn vào nút tạo tài khoản
+        private void btnTaoTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmTaoTaiKhoan frm = new frmTaoTaiKhoan();
+            frm.ShowDialog();
+        }
 
-            //Sự kiện khi nhấn vào nút đăng nhập không cần mật khẩu
-            private void btnDangNhapKCMK_Click(object sender, EventArgs e)
-            {
-                //Hiện frm cửa hàng
-                frmCuaHang frm = new frmCuaHang();
-                this.Hide();
-                frm.ShowDialog();
-
-            }
+        //Sự kiện khi nhấn vào nút đăng nhập không cần mật khẩu
+        private void btnDangNhapKCMK_Click(object sender, EventArgs e)
+        {
+            frmCuaHang frm = new frmCuaHang();
+            this.Hide();
+            frm.ShowDialog();
+        }
         private string getID(string username, string pass)
         {
             string id = "";
@@ -86,8 +79,18 @@ namespace QuanLyQuanCaffee
                 con.Close();
             }
             return id;
-
         }
-        
+
+        private void btnpassword_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                txtMatKhau.PasswordChar = '\0';
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*';
+            }
+        }
     }
 }

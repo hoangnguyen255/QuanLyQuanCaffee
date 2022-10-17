@@ -151,9 +151,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCupcake_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCupcake'";
                 DataTable dt = new DataTable();
@@ -166,9 +167,10 @@ namespace QuanLyQuanCaffee
 
         private void btnEspresso_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaEspresso'";
                 DataTable dt = new DataTable();
@@ -182,9 +184,11 @@ namespace QuanLyQuanCaffee
 
         private void btnMocha_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
+
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaMocha'";
                 DataTable dt = new DataTable();
@@ -197,9 +201,11 @@ namespace QuanLyQuanCaffee
 
         private void btnAmericano_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
+
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaAmericano'";
                 DataTable dt = new DataTable();
@@ -212,9 +218,10 @@ namespace QuanLyQuanCaffee
 
         private void btnFlan_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaFlan'";
                 DataTable dt = new DataTable();
@@ -227,6 +234,7 @@ namespace QuanLyQuanCaffee
 
         private void btnGoiMon_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = false;
             groupBox1.Enabled = true;
             enableTrue();
             dgvHoaDon.Rows.Clear();
@@ -239,9 +247,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCapuccino_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCapuccino'";
                 DataTable dt = new DataTable();
@@ -254,9 +263,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCaphedenda_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphedenda'";
                 DataTable dt = new DataTable();
@@ -269,9 +279,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCaphesuada_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphesuada'";
                 DataTable dt = new DataTable();
@@ -284,9 +295,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCaphesuanong_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphesuanong'";
                 DataTable dt = new DataTable();
@@ -299,9 +311,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCaphephin_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphephin'";
                 DataTable dt = new DataTable();
@@ -314,9 +327,10 @@ namespace QuanLyQuanCaffee
 
         private void btnBacxiu_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaBacXiu'";
                 DataTable dt = new DataTable();
@@ -329,9 +343,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCaphetrung_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaCaphetrung'";
                 DataTable dt = new DataTable();
@@ -344,9 +359,10 @@ namespace QuanLyQuanCaffee
 
         private void btnSuachuanepcam_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaSuachuanepcam'";
                 DataTable dt = new DataTable();
@@ -359,9 +375,10 @@ namespace QuanLyQuanCaffee
 
         private void btnSuachuaphucbontu_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaSuachuaphucbontu'";
                 DataTable dt = new DataTable();
@@ -374,9 +391,10 @@ namespace QuanLyQuanCaffee
 
         private void btnTradaocamsa_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaTradaocamsa'";
                 DataTable dt = new DataTable();
@@ -389,9 +407,10 @@ namespace QuanLyQuanCaffee
 
         private void btnTravai_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenDrinks,GiaTien from MenuDrinks where MaDrinks='MaTravai'";
                 DataTable dt = new DataTable();
@@ -404,9 +423,10 @@ namespace QuanLyQuanCaffee
 
         private void btnTiramisu_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaTiramisu'";
                 DataTable dt = new DataTable();
@@ -419,9 +439,10 @@ namespace QuanLyQuanCaffee
 
         private void btnMaracon_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMaracon'";
                 DataTable dt = new DataTable();
@@ -434,9 +455,10 @@ namespace QuanLyQuanCaffee
 
         private void btnMoussecake_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMoussecake'";
                 DataTable dt = new DataTable();
@@ -449,9 +471,10 @@ namespace QuanLyQuanCaffee
 
         private void btnMuffin_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaMuffin'";
                 DataTable dt = new DataTable();
@@ -464,9 +487,10 @@ namespace QuanLyQuanCaffee
 
         private void btnChocolateTarts_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaChocolateTarts'";
                 DataTable dt = new DataTable();
@@ -479,9 +503,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCookies_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCookies'";
                 DataTable dt = new DataTable();
@@ -494,9 +519,10 @@ namespace QuanLyQuanCaffee
 
         private void btnDonut_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaDonut'";
                 DataTable dt = new DataTable();
@@ -509,9 +535,10 @@ namespace QuanLyQuanCaffee
 
         private void btnCroissant_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = true;
             btnCong.Enabled = true;
             txtSoLuong.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 string s = "select TenBakery,GiaTien from MenuBakery where MaBakery='MaCroissant'";
                 DataTable dt = new DataTable();
@@ -572,9 +599,7 @@ namespace QuanLyQuanCaffee
         {
             //Tính tổng tiền
             for (int i = 0; i < dgvHoaDon.Rows.Count-1 ; i++)
-
-            {
-                 
+            {               
                 txtTongTien.Text = (int.Parse(txtTongTien.Text) +int.Parse(dgvHoaDon.Rows[i].Cells[3].Value.ToString())).ToString();
             }
             //Tạo MÃ QR MoMo
@@ -593,7 +618,7 @@ namespace QuanLyQuanCaffee
             picQRPay.Image = bitmap;
 
             //Lưu Hoá đơn vào SQL
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
@@ -636,15 +661,7 @@ namespace QuanLyQuanCaffee
                 }
             }
             return - 1;
-        }
-
-        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-            
-        }
-
+        }  
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtTenSanPham.Enabled = true;
@@ -665,18 +682,14 @@ namespace QuanLyQuanCaffee
             dgvHoaDon.Rows[selectedRow].Cells[3].Value = (int.Parse(txtSoLuong.Text) * int.Parse(txtGiaTien.Text));
             txtTongTien.Text = 0.ToString();
         }
-
-        private void txtTongTien_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            frmCuaHang ch = new frmCuaHang();
+            this.Hide();
+            ch.ShowDialog();
         }
 
-        private void label231_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void picQRPay_Click(object sender, EventArgs e)
         {
 
         }

@@ -82,7 +82,7 @@
             this.txtID.Location = new System.Drawing.Point(216, 148);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(232, 26);
-            this.txtID.TabIndex = 2;
+            this.txtID.TabIndex = 1;
             // 
             // txtTennguoidung
             // 
@@ -98,7 +98,7 @@
             this.txtTendangnhap.Location = new System.Drawing.Point(216, 225);
             this.txtTendangnhap.Name = "txtTendangnhap";
             this.txtTendangnhap.Size = new System.Drawing.Size(232, 26);
-            this.txtTendangnhap.TabIndex = 2;
+            this.txtTendangnhap.TabIndex = 3;
             // 
             // txtMatkhau
             // 
@@ -106,7 +106,7 @@
             this.txtMatkhau.Location = new System.Drawing.Point(216, 267);
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.Size = new System.Drawing.Size(232, 26);
-            this.txtMatkhau.TabIndex = 2;
+            this.txtMatkhau.TabIndex = 4;
             // 
             // btnTaoTaiKhoan
             // 
@@ -114,7 +114,7 @@
             this.btnTaoTaiKhoan.Location = new System.Drawing.Point(275, 330);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             this.btnTaoTaiKhoan.Size = new System.Drawing.Size(173, 36);
-            this.btnTaoTaiKhoan.TabIndex = 3;
+            this.btnTaoTaiKhoan.TabIndex = 5;
             this.btnTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
             this.btnTaoTaiKhoan.Click += new System.EventHandler(this.btnTaoTaiKhoan_Click);
@@ -125,7 +125,7 @@
             this.btnThoat.Location = new System.Drawing.Point(331, 381);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(117, 36);
-            this.btnThoat.TabIndex = 4;
+            this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);

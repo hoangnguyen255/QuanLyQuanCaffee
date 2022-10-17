@@ -25,7 +25,7 @@ namespace QuanLyQuanCaffee
         {
             groupBox1.Enabled = false;
             btnLuu.Enabled = false;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == true)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == true)
             {
                 laydulieu_len_listview();
                 NapBangCapVaoComboBox();
@@ -136,18 +136,6 @@ namespace QuanLyQuanCaffee
             dtpNgaySinh.Value = DateTime.Now;
             //comboBox1.SelectedIndex = ;
         }
-        //kiem tra xem nguoi dung da nhap du thong tin
-        //bool kiemtra()
-        //{
-        //   if (txtDiaChi.Text == "" || txtDienThoai.Text == "" || txtHoten.Text = "")
-        //   {
-        //       return true;
-        //   }
-        //   return false;
-        //}
-
-
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             btnSua.Enabled = true;
@@ -188,24 +176,30 @@ namespace QuanLyQuanCaffee
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
-            //string mnv = txtMaNV.Text;
-            string ht = txtHoten.Text;
-            string ns = dtpNgaySinh.Value.ToShortDateString();
-            string dc = txtDiachi.Text;
-            string sdt = txtSodienthoai.Text;
-            string bc = (cbbChucVu.SelectedIndex + 1).ToString();
-            string s = "insert into NHANVIEN values(N'" + ht + "','" + ns + "',N'" + dc + "','" + sdt + "','" + bc + "')";
-            if (themxoasua(s) == true)
+            if (txtHoten.Text == "" && txtDiachi.Text == "" && txtSodienthoai.Text == "")
             {
-                listView1.Items.Clear();
-                laydulieu_len_listview();
+                MessageBox.Show("Chưa nhập giá trị", "Thông báo");
             }
-            reset();
+            else
+            {
+                string ht = txtHoten.Text;
+                string ns = dtpNgaySinh.Value.ToShortDateString();
+                string dc = txtDiachi.Text;
+                string sdt = txtSodienthoai.Text;
+                string bc = (cbbChucVu.SelectedIndex + 1).ToString();
+                string s = "insert into NHANVIEN values(N'" + ht + "','" + ns + "',N'" + dc + "','" + sdt + "','" + bc + "')";
+                if (themxoasua(s) == true)
+                {
+                    listView1.Items.Clear();
+                    laydulieu_len_listview();
+                }
+                reset();
+            }
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
         }
@@ -217,17 +211,19 @@ namespace QuanLyQuanCaffee
                 MessageBox.Show("Hay chon mot dong de xoa");
                 return;
             }
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show("Nhan OK de thoat", "Ket noi khong thanh cong", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
+
             foreach (ListViewItem i in listView1.SelectedItems)
             {
                 string s = "delete from NHANVIEN where MaNhanVien = N'" + i.SubItems[0].Text + "'";
                 //Console.WriteLine(s);
                 SqlCommand cmd = new SqlCommand(s, con);
                 themxoasua(s);
+                MessageBox.Show("Xóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK);
             }
             con.Close();
             listView1.Items.Clear();
@@ -243,7 +239,7 @@ namespace QuanLyQuanCaffee
             btnSua.Enabled = true;
             btnLuu.Enabled = true;
             //btnHuy.Enabled = true;
-            if (ketnoi("DESKTOP-M0KCUVC\\BVSONXNB", "QuanLyQuanCaffee") == false)
+            if (ketnoi("DESKTOP-K542EP2\\NNH", "QuanLyQuanCaffee") == false)
             {
                 MessageBox.Show(" Nhấn OK để thoát chương trình ", " không kết nối CSDL được ! ", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
@@ -258,27 +254,36 @@ namespace QuanLyQuanCaffee
             string dc = txtDiachi.Text;
             string sdt = txtSodienthoai.Text;
             string bc = (cbbChucVu.SelectedIndex + 1).ToString();
-            string s = "update NHANVIEN set Hotennhanvien = N'" + ht + "',ngaysinh ='" + ns + "',Diachi=N'" + dc + "',Dienthoai= '" + sdt + "',MaBangCap ='" + bc + "'where manhanvien = N'" + txtMaNV.Text + "'";
+            string s = "update NHANVIEN set Hotennhanvien = N'" + ht + "',ngaysinh ='" + ns + "',Diachi=N'" + dc + "',Dienthoai= '" + sdt + "',MaChucVu ='" + bc + "'where manhanvien = N'" + txtMaNV.Text + "'";
             //Console.WriteLine(s ) ;
             if (themxoasua(s) == true)
             {
+                MessageBox.Show("Cập nhật thông tin thành công!", "Thông báo", MessageBoxButtons.OK);
                 con.Close();
                 listView1.Items.Clear();
                 laydulieu_len_listview();
+                btnThem.Enabled = true;
             }
         }
 
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
-            if ((MessageBox.Show("Ban co muon thoat khong?", "Thong bao", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)) == DialogResult.OK)
-            {
-                Application.Exit();
-            }
+            frmCuaHang frm = new frmCuaHang();
+            this.Hide();
+            frm.ShowDialog();
         }
 
-        private void frmQuanlynhanvien_Load(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            if (listView1.SelectedItems.Count > 0)
+            {
+                txtMaNV.Text = listView1.SelectedItems[0].SubItems[0].Text;
+                txtHoten.Text = listView1.SelectedItems[0].SubItems[1].Text;
+                dtpNgaySinh.Text = listView1.SelectedItems[0].SubItems[2].Text;
+                txtDiachi.Text = listView1.SelectedItems[0].SubItems[3].Text;
+                txtSodienthoai.Text = listView1.SelectedItems[0].SubItems[4].Text;
+                cbbChucVu.SelectedIndex = cbbChucVu.FindString(listView1.SelectedItems[0].SubItems[5].Text);
+            }
         }
     }
 }

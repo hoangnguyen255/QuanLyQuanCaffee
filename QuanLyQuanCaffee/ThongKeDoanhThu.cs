@@ -20,17 +20,15 @@ namespace QuanLyQuanCaffee
         }
 
         private void ThongKeDoanhThu_Load(object sender, EventArgs e)
-        {
-
+        { 
             this.reportViewer1.RefreshReport();
             DBContentThongKe db = new DBContentThongKe();
             List<HOADON> listProduct = db.HOADONs.ToList();
-            this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\Administrator\\Source\\Repos\\hoangnguyen255\\QuanLyQuanCaffee\\QuanLyQuanCaffee\\ReportThongKe.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "./ReportThongKe.rdlc";
             ReportDataSource reportDB = new ReportDataSource("DataSetThongKe", listProduct);
-            this.reportViewer1.LocalReport.DataSources.Clear(); //clear
-            //this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            this.reportViewer1.LocalReport.DataSources.Clear(); //clear this.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
             this.reportViewer1.LocalReport.DataSources.Add(reportDB);
-            //this.reportViewer1.LocalReport.DisplayName = " Bảng Thống kê ";
+            //this.reportViewer1.LocalReport.DisplayName = " Bảng Báo Giá ";
             this.reportViewer1.RefreshReport();
         }
 
